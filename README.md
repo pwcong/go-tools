@@ -9,7 +9,7 @@ go get github.com/pwcong/go-tools/...
 ## Tools List
 
 ### Network
-|Tool Name              |Description                    |Detail             |
-|-----------------------|-------------------------------|-------------------|
-|Port Scanner           |Scan out port  which is opening|                   |
+|Tool Name              |Description                    |Details                                                                           |
+|-----------------------|-------------------------------|----------------------------------------------------------------------------------|
+|Port Scanner           |Scan out port which is opening |[Details](https://github.com/pwcong/go-tools/tree/master/net/port-scanner)        |
 
