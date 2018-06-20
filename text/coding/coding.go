@@ -19,6 +19,10 @@ func init() {
 		* unicode_decode
 		* url_encode
 		* url_dncode
+		* md5
+		* sha1
+		* sha256
+		* sha512
 		`)
 
 	flag.Usage = func() {
@@ -49,6 +53,14 @@ func main() {
 			res, err = utils.URLEncode(source)
 		} else if method == "url_dncode" {
 			res, err = utils.URLDecode(source)
+		} else if method == "md5" {
+			res, err = utils.MD5Encrypt(source)
+		} else if method == "sha1" {
+			res, err = utils.SHA1Encrypt(source)
+		} else if method == "sha256" {
+			res, err = utils.SHA256Encrypt(source)
+		} else if method == "sha512" {
+			res, err = utils.SHA512Encrypt(source)
 		} else {
 			err = errors.New("Unknown method name")
 		}

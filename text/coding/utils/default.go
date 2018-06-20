@@ -1,6 +1,10 @@
 package utils
 
 import (
+	"crypto/md5"
+	"crypto/sha1"
+	"crypto/sha256"
+	"crypto/sha512"
 	"fmt"
 	"net/url"
 	"strconv"
@@ -40,4 +44,24 @@ func URLEncode(source string) (string, error) {
 
 func URLDecode(source string) (string, error) {
 	return url.QueryUnescape(source)
+}
+
+func MD5Encrypt(source string) (string, error) {
+	res := fmt.Sprintf("%x", md5.Sum([]byte(source)))
+	return res, nil
+}
+
+func SHA1Encrypt(source string) (string, error) {
+	res := fmt.Sprintf("%x", sha1.Sum([]byte(source)))
+	return res, nil
+}
+
+func SHA256Encrypt(source string) (string, error) {
+	res := fmt.Sprintf("%x", sha256.Sum256([]byte(source)))
+	return res, nil
+}
+
+func SHA512Encrypt(source string) (string, error) {
+	res := fmt.Sprintf("%x", sha512.Sum512([]byte(source)))
+	return res, nil
 }
