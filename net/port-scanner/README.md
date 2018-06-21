@@ -1,5 +1,5 @@
 # Port Scanner
-A tool that can scan out port  which is opening
+A tool that can scan out port  which is opening.
 
 ## Usage
 ```
