@@ -14,7 +14,7 @@ var method string
 
 func init() {
 
-	flag.StringVar(&method, "f", "unicode_encode", `coding convert method. the optional values are as follows: 
+	flag.StringVar(&method, "m", "unicode_encode", `coding convert method. the optional values are as follows: 
 		* unicode_encode
 		* unicode_decode
 		* url_encode
