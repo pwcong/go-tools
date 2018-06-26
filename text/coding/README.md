@@ -13,7 +13,7 @@ Options:
                         * unicode_encode
                         * unicode_decode
                         * url_encode
-                        * url_dncode
+                        * url_decode
                         * md5
                         * sha1
                         * sha256

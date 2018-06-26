@@ -18,7 +18,7 @@ func init() {
 		* unicode_encode
 		* unicode_decode
 		* url_encode
-		* url_dncode
+		* url_decode
 		* md5
 		* sha1
 		* sha256
@@ -51,7 +51,7 @@ func main() {
 			res, err = utils.UnicodeDecode(source)
 		} else if method == "url_encode" {
 			res, err = utils.URLEncode(source)
-		} else if method == "url_dncode" {
+		} else if method == "url_decode" {
 			res, err = utils.URLDecode(source)
 		} else if method == "md5" {
 			res, err = utils.MD5Encrypt(source)
