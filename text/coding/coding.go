@@ -15,6 +15,8 @@ var method string
 func init() {
 
 	flag.StringVar(&method, "m", "unicode_encode", `coding convert method. the optional values are as follows: 
+		* base64_encode
+		* base64_decode
 		* unicode_encode
 		* unicode_decode
 		* url_encode
@@ -45,7 +47,12 @@ func main() {
 
 		var res string
 		var err error
-		if method == "unicode_encode" {
+
+		if method == "base64_encode" {
+			res, err = utils.Base64Encode(source)
+		} else if method == "base64_decode" {
+			res, err = utils.Base64Decode(source)
+		} else if method == "unicode_encode" {
 			res, err = utils.UnicodeEncode(source)
 		} else if method == "unicode_decode" {
 			res, err = utils.UnicodeDecode(source)

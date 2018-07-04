@@ -5,6 +5,7 @@ import (
 	"crypto/sha1"
 	"crypto/sha256"
 	"crypto/sha512"
+	"encoding/base64"
 	"fmt"
 	"net/url"
 	"strconv"
@@ -64,4 +65,17 @@ func SHA256Encrypt(source string) (string, error) {
 func SHA512Encrypt(source string) (string, error) {
 	res := fmt.Sprintf("%x", sha512.Sum512([]byte(source)))
 	return res, nil
+}
+
+func Base64Encode(source string) (string, error) {
+	return base64.StdEncoding.EncodeToString([]byte(source)), nil
+}
+
+func Base64Decode(source string) (string, error) {
+
+	bytes, err := base64.StdEncoding.DecodeString(source)
+	if err != nil {
+		return "", nil
+	}
+	return string(bytes), nil
 }
