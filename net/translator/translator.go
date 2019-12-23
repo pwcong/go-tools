@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	. "github.com/pwcong/go-tools/net/translator/channel"
+	. "translator/channel"
 )
 
 var channel string

@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"net/url"
 
-	"github.com/pwcong/go-tools/net/translator/utils"
+	"translator/utils"
 )
 
 const (

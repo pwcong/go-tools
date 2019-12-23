@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/pwcong/go-tools/text/coding/utils"
+	"coding/utils"
 )
 
 var method string
